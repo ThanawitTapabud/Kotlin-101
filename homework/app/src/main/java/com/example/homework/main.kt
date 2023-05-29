@@ -1,5 +1,7 @@
 package com.example.homework
 
+import android.graphics.drawable.shapes.Shape
+
 fun main() {
     // Print "Hello, POKER MASTER!!
     println("Hello, POKER MASTER!!")
@@ -53,5 +55,33 @@ fun main() {
     val z = c downTo 0 step 2
     for (i in z) {
         println(i)
+    }
+
+    val shape = Shape()
+    shape.draw()
+    shape.area()
+
+
+}
+
+// Must Implement function in class use this interface
+interface Shapable {
+    fun area(): Double
+}
+
+class Shape : Shapable {
+    private val vertexCount: Int = 0
+
+    open fun draw() {
+        println("draw")
+    }
+
+    override fun area(): Double {
+        return  0.0
+    }
+
+    //
+    companion object {
+        const val STATIC_VALUE = "this is static value"
     }
 }
